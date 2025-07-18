@@ -7,14 +7,14 @@ runs:
     - name: Checkout code
       uses: actions/checkout@v4
     
-    - name: Set up python
-      uses: aparnajyothi-y/setup-python@update-logic-temp-dir
-      # uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
-        cache: 'pip'
-        cache-dependency-path: requirements.txt
+   - name: Set up python
+     id: setup-python
+     uses: aparnajyothi-y/setup-python@update-logic-temp-dir
+     with:
+     python-version: '3.11'
+     cache: 'pip'
+     cache-dependency-path: requirements.txt
 
-    - name: Install Dependencies
-      shell: bash
-      run: pip install -r ${{ github.action_path }}/requirements.txt
+   - name: Install Dependencies
+     shell: bash
+     run: pip install -r ${{ steps.setup-python.outputs.resolvedDependencyPath }}
