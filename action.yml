@@ -15,5 +15,6 @@ runs:
         cache: 'pip'
         cache-dependency-path: ${{ github.action_path }}/requirements.txtrequirements.txt
 
-    - name: Print resolved dependency path
-      run: echo "Resolved Path = ${{ steps.setup-python.outputs.resolvedDependencyPath }}"
+    - name: Install Dependencies
+      shell: bash
+      run: pip install -r ${{ github.action_path }}/requirements.txt
