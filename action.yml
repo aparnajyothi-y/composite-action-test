@@ -8,8 +8,8 @@ runs:
       uses: actions/checkout@v4
     
     - name: Set up python
-      # uses: aparnajyothi-y/setup-python@update-logic-temp-dir
-      uses: actions/setup-python@v5
+      uses: aparnajyothi-y/setup-python@update-logic-temp-dir
+      # uses: actions/setup-python@v5
       with:
         python-version: '3.11'
         cache: 'pip'
