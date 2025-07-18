@@ -15,5 +15,5 @@ runs:
         cache: 'pip'
         cache-dependency-path: requirements.txt
     - name: Install dependencies
-      run: `pip install -r ${resolvedDependencyPath}`
+      run: pip install -r ${{ steps.setup-python.outputs.resolvedDependencyPath }}
       shell: bash
