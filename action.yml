@@ -17,4 +17,4 @@ runs:
 
    - name: Install Dependencies
      shell: bash
-     run: pip install -r ${{ steps.setup-python.outputs.resolvedDependencyPath }}
+     run: pip install -r ${{ github.action_path }}/requirements.txt
