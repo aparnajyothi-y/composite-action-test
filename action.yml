@@ -8,12 +8,12 @@ runs:
       uses: actions/checkout@v4
     
     - name: Set up python
-      uses: aparnajyothi-y/setup-python@update-logic-temp-dir
-      # uses: actions/setup-python@v5
+      # uses: aparnajyothi-y/setup-python@update-logic-temp-dir
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
         cache: 'pip'
-        cache-dependency-path: requirements.txt
+        cache-dependency-path: ${{ github.action_path }}/requirements.txtrequirements.txt
 
     - name: Print resolved dependency path
       run: echo "Resolved Path = ${{ steps.setup-python.outputs.resolvedDependencyPath }}"
