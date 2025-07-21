@@ -13,8 +13,8 @@ runs:
       with:
         python-version: '3.11'
         cache: 'pip'
-        cache-dependency-path: requirements.txt
+        cache-dependency-path: sub/requirements.txt
 
     - name: Install Dependencies
       shell: bash
-      run: pip install -r ${{ github.action_path }}/requirements.txt
+      run: pip install -r ${{ github.action_path }}/sub/requirements.txt
