@@ -17,4 +17,4 @@ runs:
 
     - name: Install Dependencies
       shell: bash
-      run: pip install -r ${{ steps.setup_python.outputs.resolved-cache-dependency-path }}
+      run: pip install -r ${{ steps.setup_python.outputs.resolvedDependencyPath }}
